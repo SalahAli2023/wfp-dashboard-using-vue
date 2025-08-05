@@ -1,16 +1,23 @@
-<script setup>
-  import Sidebar from './components/dashboard/Sidebar.vue'
-</script>
-
 <template>
-    <div class="flex h-screen overflow-hidden bg-gray-100">
+    <div class="flex h-screen overflow-hidden bg-bg-color">
       <!-- Desktop Sidebar -->
       <Sidebar />
-        <p>
-          Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-          documentation
-        </p>
+      
+      <!-- Mobile Sidebar -->
+      <!-- <MobileSidebar /> -->
+
+      <!-- Main Content -->
+      <div class="flex flex-col flex-1 overflow-hidden">
+        <Header/>
+      </div>
     </div>
 </template>
 
-<style scoped></style>
+<script setup>
+  import Sidebar from './components/dashboard/Sidebar.vue'
+  import MobileSidebar from './components/dashboard/Sidebar.vue'
+  import Header from './components/dashboard/Header.vue'
+</script>
+
+
+<!-- <style scoped></style> -->
