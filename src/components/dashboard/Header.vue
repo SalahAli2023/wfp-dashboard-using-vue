@@ -19,7 +19,7 @@
 
         <div class="relative">
             <button class="flex items-center space-x-2 focus:outline-none" @click="toggleUserMenu">
-            <img class="w-8 h-8 rounded-full" src="../assets/images/salah.jpg" alt="Admin">
+            <img class="w-8 h-8 rounded-full" src="/src/assets/images/salah.jpg" alt="Admin">
             <span class="text-sm font-medium">Admin User</span>
             </button>
             <div class="absolute right-0 w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5" 
