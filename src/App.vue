@@ -119,12 +119,13 @@
               </div>
             </div>
 
+            <!-- Projects Overview -->
+            <ProjectTable />
+
           </div>
         </main>
       </div>
-    </div>
-
-        
+    </div>        
 </template>
 
 <script setup>
@@ -133,6 +134,8 @@
     import Header from './components/dashboard/Header.vue'
     import StatsCard from './components/dashboard/StatsCard.vue'
     import ActivityItem from './components/dashboard/ActivityItem.vue'
+    import QuickAction from './components/dashboard/QuickAction.vue'
     import { ref } from 'vue'
+import ProjectTable from './components/dashboard/ProjectTable.vue'
     const mobileSidebarOpen = ref(false);
 </script>
