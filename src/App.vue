@@ -1,6 +1,5 @@
 <template>
     <div class="flex h-screen overflow-hidden bg-bg-color">
-      
       <!-- Mobile Sidebar -->
       <MobileSidebar :mobile-open ="mobileSidebarOpen"  @close="mobileSidebarOpen = false"/>
 
@@ -9,15 +8,18 @@
 
       <!-- Main Content -->
       <div class="flex flex-col flex-1 overflow-hidden">
-        <Header/>
+        <Header @openMobileSidebar="mobileSidebarOpen=!mobileSidebarOpen"/>
       </div>
     </div>
 </template>
 
 <script setup>
-  import Sidebar from './components/dashboard/Sidebar.vue'
-  import MobileSidebar from './components/dashboard/Sidebar.vue'
-  import Header from './components/dashboard/Header.vue'
+    import MobileSidebar from './components/dashboard/MobileSidebar.vue'
+    import Sidebar from './components/dashboard/Sidebar.vue'
+    import Header from './components/dashboard/Header.vue'
+    import { ref } from 'vue'
+    const mobileSidebarOpen = ref(false);
+    // const mobileSidebarOpen = false;
 </script>
 
 
