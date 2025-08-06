@@ -1,11 +1,26 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    <div class="flex h-screen overflow-hidden bg-bg-color">
+      <!-- Mobile Sidebar -->
+      <MobileSidebar :mobile-open ="mobileSidebarOpen"  @close="mobileSidebarOpen = false"/>
+
+      <!-- Desktop Sidebar -->
+      <Sidebar />
+
+      <!-- Main Content -->
+      <div class="flex flex-col flex-1 overflow-hidden">
+        <Header @openMobileSidebar="mobileSidebarOpen=!mobileSidebarOpen"/>
+      </div>
+    </div>
 </template>
 
-<style scoped></style>
+<script setup>
+    import MobileSidebar from './components/dashboard/MobileSidebar.vue'
+    import Sidebar from './components/dashboard/Sidebar.vue'
+    import Header from './components/dashboard/Header.vue'
+    import { ref } from 'vue'
+    const mobileSidebarOpen = ref(false);
+    // const mobileSidebarOpen = false;
+</script>
+
+
+<!-- <style scoped></style> -->
