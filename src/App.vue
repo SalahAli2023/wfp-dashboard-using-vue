@@ -1,10 +1,11 @@
 <template>
     <div class="flex h-screen overflow-hidden bg-bg-color">
-      <!-- Desktop Sidebar -->
-      <Sidebar />
       
       <!-- Mobile Sidebar -->
-      <!-- <MobileSidebar /> -->
+      <MobileSidebar :mobile-open ="mobileSidebarOpen"  @close="mobileSidebarOpen = false"/>
+
+      <!-- Desktop Sidebar -->
+      <Sidebar />
 
       <!-- Main Content -->
       <div class="flex flex-col flex-1 overflow-hidden">
