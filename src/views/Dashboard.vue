@@ -127,13 +127,13 @@
 </template>
 
 <script setup>
-    import MobileSidebar from '@/components/dashboard/MobileSidebar.vue'
-    import Sidebar from '@/components/dashboard/Sidebar.vue'
-    import Header from '@/components/dashboard/Header.vue'
-    import StatsCard from '@/components/dashboard/StatsCard.vue'
-    import ActivityItem from '@/components/dashboard/ActivityItem.vue'
-    import QuickAction from '@/components/dashboard/QuickAction.vue'
-    import ProjectTable from '@/components/dashboard/ProjectTable.vue'
+    import MobileSidebar from '@/components/dashbordHome/MobileSidebar.vue'
+    import Sidebar from '@/components/dashbordHome/Sidebar.vue'
+    import Header from '@/components/dashbordHome/Header.vue'
+    import StatsCard from '@/components/dashbordHome/StatsCard.vue'
+    import ActivityItem from '@/components/dashbordHome/ActivityItem.vue'
+    import QuickAction from '@/components/dashbordHome/QuickAction.vue'
+    import ProjectTable from '@/components/dashbordHome/ProjectTable.vue'
     import { ref } from 'vue'
     const mobileSidebarOpen = ref(false);
 </script>

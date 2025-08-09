@@ -1,40 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark , .dark *));
+@custom-variant dark (&:where(.dark-theme , .dark-theme *));
 @theme {
     
+    --color-bg-color: #FFFFFF;
+    --color-text-color: #333333;
     --color-wfp-blue:#007dbc; 
     --color-wfp-dark-blue:#003A5D;
     --color-primary-color: #b6d9ff;
+    --color-nav-bg: #f8f8f8; 
+    --color-card-bg: #ffffff;     
+    --color-border-color: #616161;    
+    --color-bg-secondary: #111827; 
+    --color-secondary: #1f2937; 
+
+    --color-light-gray: #F5F5F5; 
+    --color-text-dark: #fff;
     --color-wfp-orange:#E84E10; 
     --color-wfp-orange-hover:#f67e4e;
     --color-wfp-yellow: #FFC72C; 
-    --color-text-color: #333333; 
-    --color-text-light: #666666; 
-    --color-nav-bg: #f8f8f8; 
-    --color-card-bg: #ffffff; 
-    --color-light-gray: #F5F5F5; 
-    --color-bg-secondary: #f9f9f9; 
-    --color-bg-color: #FFFFFF;
-    --color-border-color: #616161;
+
+    --color-bg: #f9fafb;
+    --color-text: #111827;
+    --color-card: #ffffff;
+    --color-primary: #2563eb;
 }
 
 @layer base{
-    .dark{
+    .dark-theme{
         --color--bg-color: #252121; 
-        --color--text-color: #f1f1f1; 
-        --color--wfp-dark-blue: #007DBC; 
+        --color--text-color: #f1f1f1;         
         --color--wfp-blue: #003A5D;
+        --color--wfp-dark-blue: #007DBC; 
         --color--primary-color: #1e90ff; 
         --color--nav-bg: #003A5D;
         --color--card-bg: #1e1e1e;
         --color--border-color: #a1a1a1; 
-        --color--bg-secondary:#2c2c2c;
+        --color--bg-secondary:#ddd7d7;
+        --color-secondary: #fff;
         --color-light-gray: #776d6d;
+        --color-text-dark: #000;
+
+
+
+        --color-bg: #111827;
+        --color-text: #f9fafb;
+        --color-card: #1f2937;
+        --color-primary: #3b82f6;
     }
+    
 }
     
     @font-face {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     src: url();
+}
+
+/* Use variables in Tailwind via custom classes */
+.card {
+    background-color: var(--color-card);
+    color: var(--color-text);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
 }
