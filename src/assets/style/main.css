@@ -32,13 +32,13 @@
     .dark-theme{
         --color--bg-color: #252121; 
         --color--text-color: #f1f1f1;         
-        --color--wfp-blue: #003A5D;
-        --color--wfp-dark-blue: #007DBC; 
-        --color--primary-color: #1e90ff; 
+        --color-wfp-blue: #003A5D;
+        --color-wfp-dark-blue: #007DBC; 
+        --color-primary-color: #1e90ff; 
         --color--nav-bg: #003A5D;
-        --color--card-bg: #1e1e1e;
-        --color--border-color: #a1a1a1; 
-        --color--bg-secondary:#ddd7d7;
+        --color-card-bg: #1e1e1e;
+        --color-border-color: #a1a1a1; 
+        --color-bg-secondary:#ddd7d7;
         --color-secondary: #fff;
         --color-light-gray: #776d6d;
         --color-text-dark: #000;

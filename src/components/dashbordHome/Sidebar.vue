@@ -1,17 +1,10 @@
 
 
 <template>
-    <!-- Mobile Sidebar Backdrop -->
-    <!-- <div 
-        v-if="mobileOpen"
-        class="fixed inset-0 bg-gray-200 opacity-78 z-40 md:hidden"
-        @click="$emit('close')"
-    > 
-    </div>-->
-        <!-- Sidebar -->
         
-    <aside class="hidden md:flex md:flex-shrink-0">
-        <div class="flex flex-col w-64 bg-wfp-dark-blue text-white">
+    <!-- Sidebar -->
+    <aside class="hidden md:flex md:flex-shrink-0 text-text bg-wfp-blue ">
+        <div class="flex flex-col w-64">
         <!-- Logo and Title -->
         <div class="flex items-center justify-center h-16 px-4 border-b border-blue-800">
             <img src="@/assets/images/wfp-logo.svg" alt="WFP Logo" class="h-8 mr-2">
@@ -25,7 +18,7 @@
                     <router-link 
                         :to="item.path"
                         class="flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors"
-                        :class="[item.active ? 'bg-blue-700 text-white' : 'hover:bg-blue-700 text-white']"
+                        :class="[item.active ? 'bg-blue-700 text-text' : 'hover:bg-blue-700 text-text']"
                         >
                         <i :class="['fas', `fa-${item.icon}`, 'mr-3']"></i>
                         {{ item.name }}
@@ -57,12 +50,21 @@
 
     defineEmits(['close']);
 
+    // const navItems = [
+    //     { name: 'Dashboard', path: '/dashboard', icon: 'tachometer-alt', active: true },
+    //     { name: 'Beneficiaries', path: '/beneficiaries', icon: 'users', active: false },
+    //     { name: 'Projects', path: '/projects', icon: 'project-diagram', active: false },
+    //     { name: 'Donations', path: '/donations', icon: 'donate', active: false },
+    //     { name: 'Reports', path: '/reports', icon: 'chart-line', active: false },
+    //     { name: 'Settings', path: '/settings', icon: 'cog', active: false }
+    // ];
+
     const navItems = [
         { name: 'Dashboard', path: '/dashboard', icon: 'tachometer-alt', active: true },
-        { name: 'Beneficiaries', path: '/beneficiaries', icon: 'users', active: false },
         { name: 'Projects', path: '/projects', icon: 'project-diagram', active: false },
-        { name: 'Donations', path: '/donations', icon: 'donate', active: false },
-        { name: 'Reports', path: '/reports', icon: 'chart-line', active: false },
+        { name: 'news', path: '/news', icon: 'donate', active: false },
+        { name: 'services', path: '/services', icon: 'chart-line', active: false },
+        { name: 'forms', path: '/forms', icon: 'users', active: false },
         { name: 'Settings', path: '/settings', icon: 'cog', active: false }
     ];
 </script>
