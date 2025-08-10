@@ -11,7 +11,7 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
   ],
-  // base: '/wfp-dashboard-using-vue/',
+  base: '/wfp-dashboard-using-vue/',
   // base: '/',
   resolve: {
     alias: {

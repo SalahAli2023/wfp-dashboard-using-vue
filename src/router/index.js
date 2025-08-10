@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter,createWebHistory } from 'vue-router'
 import DashboardLayout from '../layouts/DashboardLayout.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
@@ -7,6 +7,9 @@ import Services from '../views/Services.vue'
 import FormSubmissions from '../views/FormSubmissions.vue'
 import Settings from '../views/Settings.vue'
 // import Users from '../views/Users.vue'
+        
+
+
 
 const routes = [
     {
@@ -25,6 +28,6 @@ const routes = [
 ]
 
 export default createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/wfp-dashboard-using-vue/'),
     routes
 })
