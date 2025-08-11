@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import { useToast } from 'vue-toastification';
+
     export default {
         props: ['columns', 'storageKey'],
             data() {
@@ -73,6 +75,23 @@
                 form: {},
                 editIndex: null
                 }
+        },
+        setup(){
+            const toast = useToast();
+            const toastMessage=async()=>{
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                try {
+                    toast.success("Data has been saved into localStorage!");
+                    
+                } catch (error) {
+                    toast.error("Saved is failed. Please try again.");
+                    return {toastMessage}
+                } 
+                finally {
+                    // return toastMessage
+                }
+            }
+            return {toastMessage}
         },
         computed: {
             filteredData() {
@@ -109,13 +128,14 @@
                 this.items.splice(index, 1)
                 localStorage.setItem(this.storageKey, JSON.stringify(this.items))
             },
-            saveItem() {
+            async saveItem() {
                 if (this.editIndex !== null) {
                     this.items[this.editIndex] = { ...this.form }
                 } else {
                     this.items.push({ ...this.form })
                 }
                 localStorage.setItem(this.storageKey, JSON.stringify(this.items))
+                this.toastMessage()
                 this.showModal = false
             },
             closeModal() {
